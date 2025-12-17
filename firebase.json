@@ -1,0 +1,47 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "fripesfinderv2",
+          "appId": "1:590805636916:android:6c6a8a96d125f6acfc3761",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "fripesfinderv2",
+          "configurations": {
+            "android": "1:590805636916:android:6c6a8a96d125f6acfc3761",
+            "ios": "1:590805636916:ios:e90fef0634d9414ffc3761",
+            "macos": "1:590805636916:ios:e90fef0634d9414ffc3761",
+            "web": "1:590805636916:web:6f7c2a8408dc4016fc3761",
+            "windows": "1:590805636916:web:65c9a7e3cd7fceeffc3761"
+          }
+        }
+      }
+    }
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ]
+    }
+  ],
+  "firestore": {
+    "database": "(default)",
+    "location": "eur3",
+    "rules": "rules_version = '2';",
+    "indexes": "firestore.indexes.json"
+  }
+}
